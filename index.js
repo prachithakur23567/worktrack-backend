@@ -12,7 +12,12 @@ import connectToDatabase from "./db/mongoose.js"
 connectToDatabase();
 
  const app = express();
- app.use(cors());
+ app.use(cors(
+   {
+      origin:"https://worktrack-frontend-9mv7.vercel.app/",
+      credentials:true
+   }
+ ));
  app.use(express.json())
  app.use(express.static('public/upload'))
  app.use("/api/auth",authRouter)
