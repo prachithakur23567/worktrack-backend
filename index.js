@@ -14,10 +14,11 @@ connectToDatabase();
  const app = express();
  app.use(cors(
    {
-      origin:"https://worktrack-frontend-9mv7.vercel.app/",
+      origin:"https://worktrack-frontend-nine.vercel.app",
       credentials:true
    }
- ));
+));
+// origin:"https://worktrack-frontend-9mv7.vercel.app/",
  app.use(express.json())
  app.use(express.static('public/upload'))
  app.use("/api/auth",authRouter)
